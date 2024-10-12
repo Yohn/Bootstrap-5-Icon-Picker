@@ -14,7 +14,7 @@ class IconPicker {
 			? document.querySelector(options.iconTarget)
 			: ""; //this.el.querySelector('.input-group-text > i');
 		this.defaultIcon = options.defaultIcon || "";
-		this.addClass = options.addClass + " " || "bi ";
+		this.addClass = options.addClass || "bi";
 		this.btnClass = options.btnClass || "btn-outline-secondary";
 		this.searchPlaceholder = options.searchPlaceholder || "Search Icons..";
 		this.container = options.container
@@ -65,7 +65,7 @@ class IconPicker {
 		ul.innerHTML = IconPicker.icons
 			.map(
 				(icon) =>
-					`<div class="col" data-value="${icon}"><button type="button" class="btn ${this.btnClass}"><i class="${this.addClass}${icon}"></i></button></div>`
+					`<div class="col" data-value="${icon}"><button type="button" class="btn ${this.btnClass}"><i class="${this.addClass} ${icon}"></i></button></div>`
 			)
 			.join("");
 		menu.append(search);
@@ -129,7 +129,7 @@ class IconPicker {
 	// Set icon to input group text
 	setIcon(icon) {
 		if (this.iconTarget) {
-			this.iconTarget.setAttribute("class", this.addClass + icon);
+			this.iconTarget.setAttribute("class", this.addClass + " " + icon);
 		}
 	}
 
