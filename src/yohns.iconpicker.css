@@ -1,0 +1,7 @@
+.yo-iconpicker .dropdown-menu {
+	width: 210px;
+}
+.yo-iconpicker .icon-list {
+	height: 200px;
+	overflow: auto;
+}

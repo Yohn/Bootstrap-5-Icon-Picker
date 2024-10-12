@@ -1,35 +1,49 @@
 {
-	"name": "yohn/yohns-template",
-	"description": "A good starting point for future projects",
-	"dependencies": {
-		"@tkrotoff/bootstrap-floating-label": "0.12.2",
-		"bootstrap": "^5.3.3"
-	},
-	"copyFiles": [{
-			"from": "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-			"to": "assets/vendor/js/bootstrap.bundle.min.js"
-		}, {
-			"from": "node_modules/bootstrap/dist/css/bootstrap.min.css",
-			"to": "assets/vendor/css/bootstrap.min.css"
-		}
-	],
-	"copyFilesSettings": {
-		"whenFileExists": "notify-about-available-change",
-		"addReferenceToSourceOfOrigin": true,
-		"ignoreDotFilesAndFolders": true,
-		"removeSourceMappingURL": true,
-		"minifyJs": false,
-		"minifyJsTerserOptions": {
-			"compress": {
-				"sequences": false
-			},
-			"mangle": false,
-			"format": {
-				"semicolons": false
-			}
-		}
-	},
+	"name": "yohns-bootstrap-5-icon-picker",
+	"description": "A simple icon picker for bootstrap 5 using bootstrap icons",
+  "author": "Yohn",
+  "license": "MIT",
+  "version": "0.0.1",
 	"browserslist": [
 		"defaults"
-	]
+	],
+  "copyFiles": [
+    {
+      "from": "src/bs5-updated.json",
+      "to": "assets/data/bs5-updated.json"
+    },
+    {
+      "from": "src/yohns.iconpicker.css",
+      "to": "assets/scss/yohns.iconpicker.css"
+    },
+    {
+      "from": "src/yohns.iconpicker.js",
+      "to": "assets/js/yohns.iconpicker.js"
+    }
+	],
+  "copyFilesSettings": {
+    "whenFileExists": "notify-about-available-change",
+    "addReferenceToSourceOfOrigin": true,
+    "ignoreDotFilesAndFolders": true,
+    "removeSourceMappingURL": true,
+    "minifyJs": false,
+    "minifyJsTerserOptions": {
+      "compress": {
+        "sequences": false
+      },
+      "mangle": false,
+      "format": {
+        "semicolons": false
+      }
+    }
+  },
+	"dependencies": {
+		"bootstrap": "^5.3.3",
+		"bootstrap-icons": "^1.11.3"
+	},
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.10.0"
+  }
 }
